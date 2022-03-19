@@ -4,7 +4,8 @@ import moviedata from "../src/Components/data/data";
 import Filtring from "./Components/Filtring/Filtring.js";
 import MovieList from "./Components/MovieList/MovieList.js";
 import AddMovie from "./Components/AddMovie/AddMovie.js";
-
+import Description from "./Components/Description/Description.js"; 
+import {Routes, Route} from "react-router-dom";
 function App() {
   const [movies, setMovies] = useState(moviedata);
   const [filtredMovies, setFiltredMovies] = useState(movies);
@@ -28,9 +29,10 @@ function App() {
 
   return (
     <div className="App">
-      <Filtring filter={filter}/>
-      <MovieList movies={filtredMovies} />
-      <AddMovie adding={adding} />
+       <Routes>
+        <Route path="/" element={<> <Filtring filter={filter}/> <MovieList movies={filtredMovies} /> <AddMovie adding={adding} /> </>} />
+        <Route path="/:id" element={<Description movies={movies} />} />
+      </Routes>
     </div>
   );
 }

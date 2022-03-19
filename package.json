@@ -1,7 +1,7 @@
 {
   "name": "movie-app-hooks",
   "version": "0.1.0",
-  "homepage": "https://Hamza-Zouaoui.github.io/react-gh-pages",
+  "homepage": "https://Hamza-Zouaoui.github.io",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.2",
@@ -12,6 +12,7 @@
     "react-bootstrap": "^2.2.1",
     "react-dom": "^17.0.2",
     "react-rating-stars-component": "^2.2.0",
+    "react-router-dom": "^6.2.2",
     "react-scripts": "5.0.0",
     "react-stars": "^2.2.5",
     "web-vitals": "^2.1.4"

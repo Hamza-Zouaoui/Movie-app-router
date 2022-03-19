@@ -1,18 +1,16 @@
-import { click } from '@testing-library/user-event/dist/click';
 import React from 'react';
 import "./movieCard.css";
 
-const MovieCard = ({movie}) => {
+const MovieCard = ({ele}) => {
   return (
     <div className="MovieCard">
       <div>
-        <img src={movie.posterUrl} width="300" />
+        <img src={ele.posterUrl} alt={ele.title} width="300" />
       </div>
       <div >
-        <h2>{movie.title}</h2>
-        <p>{movie.description}</p>
-        <h3>Rate: {movie.rate}</h3>
-        <button>TRAILER</button>
+        <h2>{ele.title}</h2>
+        <p>{ele.description}</p>
+        <h3>Rate: {ele.rate}</h3>
         </div>
     </div>
   )
